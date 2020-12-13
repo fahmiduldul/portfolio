@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indonesia World Bank Data Visualized</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  
+  <!-- plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .row {
+      margin: 0;
+    }
+    #sidebar {
+      border-right: 1px solid #bbbbbb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: #FFC900;">
+    <div class="container-fluid">
+      <span class="navbar-brand mx-2 mb-0 h1">Indonesia World Bank Data Visualized</span>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/fahmiduldul" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visit my Github profile">
+            <img src="/static/github.svg" width="30px", height="30px">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/fahmi-abdulaziz-958127117/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visit my LindkedIn profile">
+            <img src="/static/linkedin.svg" width="30px", height="30px">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- chart area -->
+  <div class="container" style="padding-top: 20px;">
+
+    <!-- title -->
+    <div class="row">
+      <h2 class="text-center">Indonesia World Bank Data Visualized</h2>
+    </div>
+
+    <!-- graph 1 & 2 -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div id="chart-1"></div>
+        <p class="mx-5">
+          This chart show how big the contribution of manufacturing for Indonesia economy. Even after 60 years, manufacturing still one of the economic mover
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div id="chart-2"></div>
+        <p class="mx-5">
+          As GPD grows, child mortality becomes less. This means Indonesia has better healthcare since the last 60 years.
+        </p>
+      </div>
+    </div>
+    <!-- graph 3 & 4 -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div id="chart-3"></div>
+        <p class="mx-5">
+          This is the bad part of Indonesia economy growth. It really depends on fossil fuel. The trends still goes up over the years
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div id="chart-4"></div>
+        <p class="mx-5">
+          One of the reason for CO2 Emissions growth in Indonesia is electricity production. As show in this graph, Indonesia have been investing heavily in Fossil fuel.
+        </p>
+      </div>
+    </div>
+    <p>To see the source code <a href="https://github.com/fahmiduldul/ds-web-dev">click here</a></p>
+  </div>
+
+  <script>
+    let figures = {{ figuresJSON | safe }}
+    for(let i = 0; i < figures.length; i++) {
+      Plotly.plot('chart-'+(i+1).toString(), figures[i].data, figures[i].layout || {})
+    }
+  </script>
+</body>
+</html>
