@@ -31,7 +31,7 @@ In this project I use worldbank data to visualize Indonesia growth in the past 6
 Repository: [Click here](https://github.com/fahmiduldul/ds-web-dev)
 link: [Click here](https://fahmi-dsnsd-web-app.herokuapp.com/)
 
-### Data Engineering Disaster Response
+### Data Engineering Disaster Pipeline
 
 In this project, I try to create a model to predict what actually survivor need based on given text and categorize them into 36 categories. This will help volunteers to prepare and give what the survivor really needs.
 
@@ -45,3 +45,14 @@ In this project, I try to create a model to predict what actually survivor need 
 - [Sklearn](https://scikit-learn.org/)
 
 Repository: [Click here](https://github.com/fahmiduldul/ds-data-engineering)
+
+### Churn Prediction Using ML
+
+In subscription based service, churing is when user stop using the paid service. Since loss of service subscribers is a big lost, We need to predict whether user will churn based on their in app activity. This project I use Sparkify 12 GB dataset provided by Udacity. I use machine learning algorithm to predict whether user will churn or not.
+
+**Built with:**
+
+- [Apache Spark](https://spark.apache.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Numpy](https://numpy.org/)
+- [Sklearn](https://scikit-learn.org/)
