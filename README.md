@@ -29,7 +29,8 @@ In this project I use worldbank data to visualize Indonesia growth in the past 6
 - [Heroku](https://www.heroku.com/)
 
 Repository: [Click here](https://github.com/fahmiduldul/ds-web-dev)
-link: [Click here](https://fahmi-dsnsd-web-app.herokuapp.com/)
+
+Link: [Click here](https://fahmi-dsnsd-web-app.herokuapp.com/)
 
 ### Data Engineering Disaster Pipeline
 
@@ -58,4 +59,5 @@ In subscription based service, churing is when user stop using the paid service.
 - [Sklearn](https://scikit-learn.org/)
 
 Repository: [Click here](https://github.com/fahmiduldul/ds-sparkify)
+
 Article: [Click here](https://fahmiduldul.medium.com/churn-prediction-using-machine-learning-61b50aa111e8)
